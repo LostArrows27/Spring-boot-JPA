@@ -14,7 +14,6 @@ public class BeanController {
 
     @GetMapping("/bean/calculator/add")
     public ResponseEntity<Integer> add() {
-        int result = calculator.add(1, 2);
-        return ResponseEntity.ok(result);
+        return ResponseEntity.ok(calculator.add(10, 5));
     }
 }
