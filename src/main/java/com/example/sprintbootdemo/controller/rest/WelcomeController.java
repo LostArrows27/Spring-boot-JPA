@@ -1,4 +1,4 @@
-package com.example.sprintbootdemo.controller;
+package com.example.sprintbootdemo.controller.rest;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

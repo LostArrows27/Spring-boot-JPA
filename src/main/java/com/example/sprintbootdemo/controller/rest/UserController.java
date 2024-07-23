@@ -1,6 +1,5 @@
-package com.example.sprintbootdemo.controller;
+package com.example.sprintbootdemo.controller.rest;
 
-import com.example.sprintbootdemo.exception.UserNotFoundException;
 import com.example.sprintbootdemo.model.User;
 import com.example.sprintbootdemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +23,12 @@ public class UserController {
         return userService.getUserById(id);
     }
 
-    @PostMapping
+    @PostMapping("/create")
+    public User createUser(@RequestParam String name, @RequestParam String email) {
+        return userService.createUser(new User(name, email));
+    }
+
+    @PostMapping(value = "/create", consumes = "application/json")
     public User createUser(@RequestBody User user) {
         return userService.createUser(user);
     }

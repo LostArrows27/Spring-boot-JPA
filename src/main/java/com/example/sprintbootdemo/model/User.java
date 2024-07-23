@@ -13,6 +13,14 @@ public class User {
     @Column(name = "email", nullable = false)
     private String email;
 
+    public User(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
+
+    public User() {
+    }
+
     // Getters and setters
     public Long getId() {
         return id;

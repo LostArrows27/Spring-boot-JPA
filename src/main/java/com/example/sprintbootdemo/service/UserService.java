@@ -28,6 +28,14 @@ public class UserService {
     }
 
     public User createUser(User user) {
+        if (user.getEmail() == null || user.getEmail().isEmpty()) {
+            throw new UserNotFoundException("User email should not be empty");
+        }
+
+        if (user.getName() == null || user.getName().isEmpty()) {
+            throw new UserNotFoundException("User name should not be empty");
+        }
+
         return userRepository.save(user);
     }
 

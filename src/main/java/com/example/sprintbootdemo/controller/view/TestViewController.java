@@ -1,4 +1,4 @@
-package com.example.sprintbootdemo.controller;
+package com.example.sprintbootdemo.controller.view;
 
 import com.example.sprintbootdemo.model.User;
 import com.example.sprintbootdemo.service.UserService;
@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class ViewController {
+public class TestViewController {
 
     @Autowired
     private UserService userService;
