@@ -21,12 +21,7 @@ public class UserController {
 
     @GetMapping("/{id}")
     public User getUserById(@PathVariable Long id) {
-        User user =  userService.getUserById(id);
-        if (user == null) {
-            throw new UserNotFoundException("Not found user with ID: " + id);
-        }
-
-        return user;
+        return userService.getUserById(id);
     }
 
     @PostMapping
