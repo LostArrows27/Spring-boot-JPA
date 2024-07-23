@@ -4,6 +4,7 @@ import com.example.sprintbootdemo.exception.UserNotFoundException;
 import com.example.sprintbootdemo.model.User;
 import com.example.sprintbootdemo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,7 +15,7 @@ public class UserService {
     private UserRepository userRepository;
 
     public List<User> getAllUsers() {
-        return userRepository.findAll();
+        return userRepository.findAll(Sort.by(Sort.Order.asc("name")));
     }
 
     public User getUserById(Long id) {
