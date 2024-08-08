@@ -1,3 +1,6 @@
+- [Attention]: This project is for back up my learning file for Spring Boot + Spring MVC in summer internship
+- [Attention]: The master branch content code for testing main 1st project in summer internship
+
 # Spring Boot CRUD Application Demo
 
 ## Overview
